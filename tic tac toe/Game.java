@@ -55,11 +55,13 @@ public class Game {
                     System.out.println("Player " + currentPlayer.getSymbol() + " wins!");
                     updateScores(currentPlayer);
                     printScores();
+                    board.initializeBoard();
                 } else if (board.isFull()) {
                     board.printBoard();
                     System.out.println("The game is a tie!");
                     updateScores(null);
                     printScores();
+                    board.initializeBoard();
                 } else {
                     currentPlayer = (currentPlayer == player1) ? player2 : player1;
                 }
