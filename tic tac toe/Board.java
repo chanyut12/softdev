@@ -2,11 +2,12 @@ public class Board {
     private char[][] board;
     private static final int SIZE = 3;
 
+    //constructor
     public Board() {
         board = new char[SIZE][SIZE];
         initializeBoard();
     }
-
+    //make board
     public void initializeBoard() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -14,7 +15,7 @@ public class Board {
             }
         }
     }
-
+    //print board
     public void printBoard() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -23,7 +24,7 @@ public class Board {
             System.out.println();
         }
     }
-
+    //check (draw case)
     public boolean isFull() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -34,7 +35,7 @@ public class Board {
         }
         return true;
     }
-
+    //check the symbol that have another symbol in this posiotion already?
     public boolean placeMark(int row, int col, char symbol) {
         if (row >= 0 && col >= 0 && row < SIZE && col < SIZE && board[row][col] == '-') {
             board[row][col] = symbol;
@@ -42,7 +43,7 @@ public class Board {
         }
         return false;
     }
-
+    //checkwin
     public boolean checkWin(char symbol) {
         // Check rows
         for (int i = 0; i < SIZE; i++) {

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//this is a constructor
 public class Game {
     private Board board;
     private Player player1;
